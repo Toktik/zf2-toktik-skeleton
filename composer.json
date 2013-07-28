@@ -1,0 +1,31 @@
+{
+  "name": "toktik/zf2-toktik-skeleton",
+  "description": "ZF2 Toktik Skeleton",
+  "keywords": [
+    "zf2",
+    "api"
+  ],
+  "authors": [
+    {
+      "name": "Tigran Tokmajyan",
+      "email": "toktikweb@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.3.3",
+    "zendframework/zendframework": "2.2.*",
+    "twbs/bootstrap": "dev-master",
+    "widmogrod/zf2-assetic-module": "1.*"
+  },
+  "require-dev": {
+    "zendframework/zend-developer-tools": "dev-master",
+    "bjyoungblood/BjyProfiler": "dev-master",
+    "twbs/bootstrap": "dev-master"
+  },
+  "autoload": {
+    "psr-0": {
+    }
+  }
+}
