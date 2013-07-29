@@ -19,10 +19,10 @@ return array(
     'webPath' => realpath('public/assets'),
     'basePath' => 'assets',
 
-    'controllers' => array(
-        'App\Controller\Index' => array(
-            '@my_css',
-            '@my_js',
+    'routes' => array(
+        '(.*)' => array(
+            '@main_css',
+            '@main_js'
         ),
     ),
 
@@ -31,7 +31,7 @@ return array(
             'root_path' => __DIR__ . '/../assets',
 
             'collections' => array(
-                'my_css' => array(
+                'main_css' => array(
                     'assets' => array(
                         'css/bootstrap.min.css',
                         'css/style.css',
@@ -44,8 +44,11 @@ return array(
                             'name' => 'Assetic\Filter\CssMinFilter'
                         ),
                     ),
+                    'options' => array(
+                        'output' => 'styles/main.css'
+                    )
                 ),
-                'my_js' => array(
+                'main_js' => array(
                     'assets' => array(
                         'js/html5.js',
                         'js/bootstrap.min.js',
@@ -56,7 +59,18 @@ return array(
                             'name' => 'Assetic\Filter\JSMinFilter'
                         ),
                     ),
+                    'options' => array(
+                        'output' => 'js/main.js'
+                    )
                 ),
+                'main_img' => array(
+                    'assets' => array(
+                        'img/*'
+                    ),
+                    'options' => array(
+                        'move_raw' => true
+                    )
+                )
             ),
         ),
     ),
